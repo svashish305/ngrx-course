@@ -6,7 +6,7 @@ export const login = createAction(
   props<{user: User}>()
 );
 
-// const newLoginAction = login({user: {id: '', email: ''}})
+// const newLoginAction = login({user: {id: '', email: ''}}) // or initialize as undefined
 
 export const logout = createAction(
   "[Top Menu] Logout"
