@@ -59,7 +59,9 @@ const routes: Routes = [
       metaReducers,
       runtimeChecks: {
         strictStateImmutability: true,
-        strictActionImmutability: true
+        strictActionImmutability: true,
+        strictActionSerializability: true,
+        strictStateSerializability: true
       }
     }),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
