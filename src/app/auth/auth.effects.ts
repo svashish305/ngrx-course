@@ -17,6 +17,16 @@ export class  AuthEffects {
     ,
     {dispatch: false}); 
 
+  logout$ = createEffect(() => 
+      this.actions$
+        .pipe(
+          ofType(AuthActions.logout),
+          tap(action => localStorage.removeItem('user')
+          )
+      )
+    ,
+    {dispatch: false}); 
+
   constructor(private actions$: Actions) {
 
       // login$.subscribe();
